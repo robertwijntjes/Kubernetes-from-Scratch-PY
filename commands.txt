@@ -1,2 +1,2 @@
-docker build -t oracle-api .
-docker run -d --name mycontainer -p 80:80 oracle-api
+docker build -t fast-api .
+docker run -d --name fast-api -p 80:80 fast-api
