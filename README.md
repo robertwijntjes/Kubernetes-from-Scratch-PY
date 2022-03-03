@@ -62,4 +62,8 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace=p
 
 ##### Checking the endpoint
 ![image](https://user-images.githubusercontent.com/15350162/156442467-13c449f7-f37a-43a5-be12-98c840522358.png)
+![image](https://user-images.githubusercontent.com/15350162/156640290-6fe9dbd5-1db5-46ea-bf5f-796c783ad4c9.png)
+![image](https://user-images.githubusercontent.com/15350162/156640365-53b539b8-af03-49bc-bfc5-ecddf03e4b4d.png)
+![image](https://user-images.githubusercontent.com/15350162/156640391-6791e566-db67-4a90-a164-cda7a40b1a1d.png)
+
 
