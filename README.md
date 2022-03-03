@@ -5,6 +5,7 @@ In order to get this to work there are a few prerequisites:
 * Minikube
 * Kubectl
 * Docker
+* Helm
 
 ### Steps for Replication
 ##### Build the Image
