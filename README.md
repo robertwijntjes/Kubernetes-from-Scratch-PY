@@ -2,10 +2,11 @@
 
 ### Requirements
 In order to get this to work there are a few prerequisites:
-* Minikube
-* Kubectl
-* Docker
-* Helm
+* [Minikube](https://phoenixnap.com/kb/install-minikube-on-ubuntu)
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* [Helm](https://helm.sh/docs/intro/install/)
+* Ubuntu, but you can just make small changes and it will work.
 
 ### Steps for Replication
 ##### Build the Image
