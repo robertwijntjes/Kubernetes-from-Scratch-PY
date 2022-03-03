@@ -27,20 +27,13 @@ kubectl apply -f api.yaml
 kubectl port-forward service/fast-api-svc 8080
 ```
 
-## Checking the Results
-##### Checking the minikube dashboard
-```
-minikube dashboard
-```
-
-## Grafana and Prometheus
-## Use Helm 3 to Install Prometheus Stack
-### Add Helm Repo 
+### Grafana and Prometheus
+##### Add Helm Repo 
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
-### Install Prometheus Stack
+##### Install Prometheus Stack
 - prometheus-community/kube-state-metrics
 - prometheus-community/prometheus-node-exporter
 - grafana/grafana
@@ -51,7 +44,7 @@ https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-promet
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace=prometheus --create-namespace --wait
 ```
 
-### Add Port Forward
+##### Add Port Forward
 - Prometheus node Exporter      
 `kubectl port-forward service/prometheus-prometheus-node-exporter 9100   --namespace=prometheus`        
 - Prometheus UI    
@@ -59,6 +52,11 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace=p
 - Prometheus Grafana   
 `kubectl port-forward deployment/prometheus-grafana 3000 --namespace=prometheus`
 
+### Checking the Results
+##### Checking the minikube dashboard
+```
+minikube dashboard
+```
 
 ##### Checking the endpoint
 ![image](https://user-images.githubusercontent.com/15350162/156442467-13c449f7-f37a-43a5-be12-98c840522358.png)
