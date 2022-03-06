@@ -51,6 +51,3 @@ def get_image(file : str):
 
 def get_duplicates_all():
     return ([objects for objects in data if data.count(objects) > 1])
-
-def get_metrics():
-    print("Metrics")
