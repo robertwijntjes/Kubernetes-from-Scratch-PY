@@ -96,6 +96,6 @@ docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
     * ERRORS PER MINUTE
     * API USAGE GROWTH
     
-2.Instead of using Helm Charts for prometheus deployment, build ones own kubernetes chart would be more optimal as you would have complete control over what is installed into your cluster. Although using the pre-built helm charts are great for starting out, they can be over provisioning.
+2. Instead of using Helm Charts for prometheus deployment, build ones own kubernetes chart would be more optimal as you would have complete control over what is installed into your cluster. Although using the pre-built helm charts are great for starting out, they can be over provisioning.
 
 3. Add more failure handing to the makefile so that if pre-requisites dont exist, it can handle this smoothly.
