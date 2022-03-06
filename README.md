@@ -37,10 +37,7 @@ kubectl port-forward service/fast-api-svc 8080 --namespace=fast-api
 ```
 docker build -t robertwijntjes/fast-api:1.0.0 .
 ```
-##### Test Locally
-```
-docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
-```
+
 ##### Minikube
 ```
 minikube start 
@@ -49,7 +46,8 @@ minikube cache add robertwijntjes/fast-api:1.0.0
 
 ### Kubernetes
 ```
-kubectl apply -f api.yaml
+kubectl apply -f namespace.yaml
+kubectl apply -f api.yaml -n=fast-api
 kubectl port-forward service/fast-api-svc 8080
 ```
 
@@ -82,6 +80,10 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace=p
 ##### Checking the minikube dashboard
 ```
 minikube dashboard
+```
+##### Testing the image locally
+```
+docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 ```
 
 ##### Checking the endpoint
