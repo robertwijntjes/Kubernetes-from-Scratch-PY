@@ -65,7 +65,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace=p
 `kubectl port-forward service/prometheus-operated  9090 --namespace=prometheus`  
 - Prometheus Grafana   
 `kubectl port-forward deployment/prometheus-grafana 3000 --namespace=prometheus`
-- Fast Api Server
+- Fast-Api Server   
 `kubectl port-forward service/fast-api-svc 8080 --namespace=fast-api`
 
 ### Checking the Results
