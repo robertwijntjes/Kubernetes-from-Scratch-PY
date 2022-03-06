@@ -78,7 +78,7 @@ minikube dashboard
 docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 ```
 
-##### Checking the endpoint
+### Checking the endpoint
 ###### Fast-Api Server
 ![image](https://user-images.githubusercontent.com/15350162/156442467-13c449f7-f37a-43a5-be12-98c840522358.png)
 ###### Prometheus
