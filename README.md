@@ -79,13 +79,13 @@ docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 ```
 
 ### Checking the endpoint
-###### Fast-Api Server
+#### Fast-Api Server
 ![image](https://user-images.githubusercontent.com/15350162/156442467-13c449f7-f37a-43a5-be12-98c840522358.png)
-###### Prometheus
+#### Prometheus
 ![image](https://user-images.githubusercontent.com/15350162/156640290-6fe9dbd5-1db5-46ea-bf5f-796c783ad4c9.png)
-###### Metrics Page
+#### Metrics Page
 ![image](https://user-images.githubusercontent.com/15350162/156640365-53b539b8-af03-49bc-bfc5-ecddf03e4b4d.png)
-###### Grafana
+#### Grafana
 ![image](https://user-images.githubusercontent.com/15350162/156640391-6791e566-db67-4a90-a164-cda7a40b1a1d.png)
 
 
