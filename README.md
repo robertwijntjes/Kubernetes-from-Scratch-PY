@@ -11,17 +11,17 @@ In order to get this to work there are a few prerequisites:
 
 ### Recommended way for Replication
 ##### 1. Using the makefile:
-Check for errors, as without this passing, the rest won't work
+###### Check for errors, as without this passing, the rest won't work
 ```
 make plan
 ```
 
-Builds the cluster
+###### Builds the cluster
 ```
 make setup
 ```
 
-Provisions resources in the cluster
+###### Provisions resources in the cluster
 ```
 make apply
 ```
