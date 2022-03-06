@@ -88,4 +88,4 @@ docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 #### Grafana
 ![image](https://user-images.githubusercontent.com/15350162/156640391-6791e566-db67-4a90-a164-cda7a40b1a1d.png)
 
-
+ ( <br> )
