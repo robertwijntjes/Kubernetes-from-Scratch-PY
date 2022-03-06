@@ -33,37 +33,27 @@ kubectl port-forward deployment/prometheus-grafana 3000 --namespace=prometheus
 kubectl port-forward service/fast-api-svc 8080 --namespace=fast-api
 ```
 ### Manual Steps for Replication
-##### Build the Image
+###### Build the Image
 ```
 docker build -t robertwijntjes/fast-api:1.0.0 .
 ```
-
-##### Minikube
+###### Start the Minikube cluster and add image
 ```
 minikube start 
 minikube cache add robertwijntjes/fast-api:1.0.0
 ```
 
-### Kubernetes
+###### Apply Kubernetes charts to the cluster
 ```
 kubectl apply -f namespace.yaml
 kubectl apply -f api.yaml -n=fast-api
-kubectl port-forward service/fast-api-svc 8080
 ```
-
-### Grafana and Prometheus
-##### Add Helm Repo 
+###### Add Helm Repo 
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 ```
-##### Install Prometheus Stack
-- prometheus-community/kube-state-metrics
-- prometheus-community/prometheus-node-exporter
-- grafana/grafana
-  
-https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack
-
+###### Apply [Helm Chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) to the cluster
 ```
 helm install prometheus prometheus-community/kube-prometheus-stack --namespace=prometheus --create-namespace --wait
 ```
@@ -75,13 +65,15 @@ helm install prometheus prometheus-community/kube-prometheus-stack --namespace=p
 `kubectl port-forward service/prometheus-operated  9090 --namespace=prometheus`  
 - Prometheus Grafana   
 `kubectl port-forward deployment/prometheus-grafana 3000 --namespace=prometheus`
+- Fast Api Server
+`kubectl port-forward service/fast-api-svc 8080 --namespace=fast-api`
 
 ### Checking the Results
-##### Checking the minikube dashboard
+###### Checking the minikube dashboard
 ```
 minikube dashboard
 ```
-##### Testing the image locally
+###### Testing the image locally
 ```
 docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 ```
