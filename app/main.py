@@ -6,7 +6,7 @@ app = FastAPI()
 
 data = [{
  "id": "wBnmLMNkbsFErsjlDKWjA",
- "name": "oracle.jpeg",
+ "name": "techcompany.jpeg",
  "image": 16384,
  "timestamp": "2021-06-08T13:52:28+00:00"
 },
@@ -17,7 +17,7 @@ data = [{
  "timestamp": "2021-07-08T13:52:28+00:00"
 },{
  "id": "wBnmLMNkbsFErsjlDKWjA",
- "name": "oracle.jpeg",
+ "name": "techcompany.jpeg",
  "image": 16384,
  "timestamp": "2021-06-08T13:52:28+00:00"
 }
