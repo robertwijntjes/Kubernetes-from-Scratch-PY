@@ -46,7 +46,7 @@ minikube cache add robertwijntjes/fast-api:1.0.0
 ###### Apply Kubernetes charts to the cluster
 ```
 kubectl apply -f namespace.yaml
-kubectl apply -f api.yaml -n=fast-api
+kubectl apply -f api.yaml --namespace=fast-api
 ```
 ###### Add Helm Repo 
 ```
