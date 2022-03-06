@@ -8,7 +8,31 @@ In order to get this to work there are a few prerequisites:
 * [Helm](https://helm.sh/docs/intro/install/)
 * Ubuntu, but you can just make small changes and it will work.
 
-### Steps for Replication
+
+### Recommended way for Replication
+##### 1. Using the makefile:
+Check for errors, as without this passing, the rest won't work
+```
+make plan
+```
+
+Builds the cluster
+```
+make setup
+```
+
+Provisions resources in the cluster
+```
+make apply
+```
+##### 2. Port Forwarding
+```
+kubectl port-forward service/prometheus-prometheus-node-exporter 9100   --namespace=prometheus
+kubectl port-forward service/prometheus-operated  9090 --namespace=prometheus
+kubectl port-forward deployment/prometheus-grafana 3000 --namespace=prometheus
+kubectl port-forward service/fast-api-svc 8080 --namespace=fast-api
+```
+### Manual Steps for Replication
 ##### Build the Image
 ```
 docker build -t robertwijntjes/fast-api:1.0.0 .
