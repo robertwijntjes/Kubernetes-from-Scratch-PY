@@ -88,4 +88,12 @@ docker run -p 8080:8080 --name fastapi robertwijntjes/fast-api:1.0.0
 #### Grafana
 ![image](https://user-images.githubusercontent.com/15350162/156640391-6791e566-db67-4a90-a164-cda7a40b1a1d.png)
 
-<br />
+=====================================================================================================================================================
+1. The metric collection about API requests could be heavily improved, the following would be further added:
+    a. REQUEST PER MINUTE
+    b. AVERAGE AND MAX LATENCY
+    c. UPTIME or AVAILABILITY
+    d. ERRORS PER MINUTE
+    e. API USAGE GROWTH
+2.Instead of using Helm Charts for prometheus deployment, build ones own kubernetes chart would be more optimal as you would have complete control over what is installed into your cluster. Although using the pre-built helm charts are great for starting out, they can be over provisioning.
+3. Add more failure handing to the makefile so that if pre-requisites dont exist, it can handle this smoothly.
